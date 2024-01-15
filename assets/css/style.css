@@ -40,6 +40,99 @@ html::-webkit-scrollbar-thumb {
   background: #420177;
 }
 
+.cursor {
+  background-color: whitesmoke;
+  width: 24px;
+  height: 24px;
+  transform-origin: center;
+  top: 0;
+  left: 0;
+  position: absolute;
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform linear .125s, opacity .125s ease-in .125s;
+  border-radius: 100%;
+  opacity: 0;
+  z-index: 9999;
+
+  &-trail {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 2px solid #FF674D;
+    top: -2px;
+    left: -2px;
+    position: absolute;
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    will-change: transform;
+    transition: transform linear .125s, opacity .125s ease-in .125s;
+    border-radius: 100%;
+    opacity: 0;
+    z-index: 9999;
+  }
+}
+
+/* the following CSS is for demo purposes only */
+
+
+.main {
+
+
+
+  &>* {
+    z-index: 1;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0;
+    height: 100%;
+    border-left: 10px solid whitesmoke;
+    pointer-events: none;
+    z-index: 0;
+
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+    pointer-events: none;
+    z-index: 0;
+    border-bottom: 10px solid whitesmoke;
+    transform: translateY(-50%);
+
+    @media (max-width: 500px) {
+      content: "This pen isn't for mobile ";
+      font-family: 'IBM Plex Sans';
+      line-height: 1.15;
+      background: black;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      padding: 2rem;
+      width: 100vw;
+      height: 100vh;
+      transform: none;
+      word-break: break-all;
+      top: 0;
+      left: 0;
+      right: initial;
+      z-index: 1000;
+      max-width: fit-content;
+    }
+  }
+}
+
 /* pre loader start */
 .loader-container {
   position: fixed;
