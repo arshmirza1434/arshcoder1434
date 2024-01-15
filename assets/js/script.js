@@ -1,3 +1,59 @@
+var timeout
+
+function fancyCursor(e) {
+
+  let halfCursorSize = 12
+  let halfTrailSize = 40
+  let scaleMin = 0.35
+  let scaleMax = 1.0
+  let finalX = e.pageX - halfCursorSize
+  let finalY = e.pageY - halfCursorSize
+  let finalTrailX = e.pageX - halfTrailSize
+  let finalTrailY = e.pageY - halfTrailSize
+  
+  document.querySelector('.cursor').style.transform = 'translate('+finalX+'px,'+finalY+'px) scale('+scaleMin+')'
+  
+  setTimeout(() => {
+    document.querySelector('.cursor-trail').style.transform = 'translate('+finalTrailX+'px,'+finalTrailY+'px) scale('+scaleMin+')'
+  }, 100)
+  
+  if(timeout !== undefined) {
+    window.clearTimeout(timeout)
+  }
+  
+  timeout = window.setTimeout(function() {
+    document.querySelector('.cursor').style.transform = 'translate('+finalX+'px,'+finalY+'px) scale('+scaleMax+')'
+    document.querySelector('.cursor-trail').style.transform = 'translate('+finalTrailX+'px,'+finalTrailY+'px) scale('+scaleMax+')'
+  }, 250)
+  document.querySelector('.cursor').style.opacity = '1'
+  document.querySelector('.cursor-trail').style.opacity = '1'
+}
+
+function cursorLoader() {
+  if(document.querySelector('.cursor__wrapper')) {
+    document.querySelector('.cursor__wrapper').addEventListener('mousemove',fancyCursor)
+    document.querySelector('.cursor__wrapper').addEventListener('mouseleave',() => {
+      document.querySelector('.cursor').style.opacity = '0'
+      document.querySelector('.cursor-trail').style.opacity = '0'
+    },false)
+    window.addEventListener('scroll', function (e) {
+      document.querySelector('.cursor').style.opacity = '0'
+      document.querySelector('.cursor-trail').style.opacity = '0'
+    })
+  }
+}
+
+window.addEventListener('load', function() {
+  cursorLoader()
+  function animate() {
+    requestAnimationFrame(animate)
+  }
+  animate()
+})
+
+
+
+
 $(document).ready(function () {
 
     $('#menu').click(function () {
