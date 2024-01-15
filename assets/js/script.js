@@ -51,15 +51,14 @@ window.addEventListener('load', function() {
   animate()
 })
 
-
   document.addEventListener("DOMContentLoaded", function () {
-   
+    // Get the element by its ID
     var myElement = document.getElementById("loader-container");
 
-  s
+    // Set a timeout to hide the element after 4 seconds
     setTimeout(function () {
       myElement.style.display = "none";
-    }, 4000);
+    }, 4000); // 4 seconds (4000 milliseconds)
   });
 
 
