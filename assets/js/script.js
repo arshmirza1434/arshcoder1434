@@ -52,6 +52,15 @@ window.addEventListener('load', function() {
 })
 
 
+  document.addEventListener("DOMContentLoaded", function () {
+   
+    var myElement = document.getElementById("loader-container");
+
+  s
+    setTimeout(function () {
+      myElement.style.display = "none";
+    }, 4000);
+  });
 
 
 $(document).ready(function () {
