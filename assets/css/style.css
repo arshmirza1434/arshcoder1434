@@ -54,7 +54,7 @@ html::-webkit-scrollbar-thumb {
   transition: transform linear .125s, opacity .125s ease-in .125s;
   border-radius: 100%;
   opacity: 0;
-  z-index: 9999;
+  z-index: 10001;
 
   &-trail {
     width: 80px;
@@ -70,7 +70,7 @@ html::-webkit-scrollbar-thumb {
     transition: transform linear .125s, opacity .125s ease-in .125s;
     border-radius: 100%;
     opacity: 0;
-    z-index: 9999;
+    z-index: 10001;
   }
 }
 
@@ -157,7 +157,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100000000;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
