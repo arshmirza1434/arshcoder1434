@@ -3,7 +3,7 @@
     "name": "Amica Publication",
     "desc": "This is ecommerce website for book store with order product.  Built using HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY, PHP, LARAVEL, MYSQL.",
     "image": "amicapublication",
-    "category": "android/web",
+    "category": "ecommerce",
     "links": {
       "view": "",
       "code": ""
