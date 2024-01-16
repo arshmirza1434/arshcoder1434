@@ -82,7 +82,7 @@ html::-webkit-scrollbar-thumb {
 
 
   &>* {
-    z-index: 1;
+/*     z-index: 1; */
   }
 
   &:before {
