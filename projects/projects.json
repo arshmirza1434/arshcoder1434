@@ -2,7 +2,7 @@
   {
     "name": "Amica Publication",
     "desc": "This is ecommerce website for book store with order product.  Built using HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY, PHP, LARAVEL, MYSQL.",
-    "image": "https://www.salesforce.com/blog/wp-content/uploads/sites/2/2023/11/SF_Blog_Image_Ecommerce_Changing_Everything.png",
+    "image": "amicapublication",
     "category": "android/web",
     "links": {
       "view": "",
