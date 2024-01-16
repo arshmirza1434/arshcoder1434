@@ -8,6 +8,16 @@
       "view": "",
       "code": ""
     }
+  },
+  {
+    "name": "Delhi Public School",
+    "desc": "This website for school. Built using HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY, PHP, LARAVEL, MYSQL.",
+    "image": "delhipublic",
+    "category": "education",
+    "links": {
+      "view": "",
+      "code": ""
+    }
   }
 
 ]
