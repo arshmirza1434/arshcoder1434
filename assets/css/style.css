@@ -57,8 +57,8 @@ html::-webkit-scrollbar-thumb {
   z-index: 10001;
 
   &-trail {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     border: 2px solid #FF674D;
     top: -2px;
