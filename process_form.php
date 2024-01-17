@@ -1,36 +1,33 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $message = $_POST['message'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect form data
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $message = $_POST["message"];
 
-    // Replace with your email address
-    $to = 'osamamirza1434@gmail.com';
+    // Recipient email address (your Gmail account)
+    $to = "arshmirza0258@gmail.com"; // Replace with your actual Gmail address
 
     // Subject of the email
-    $subject = 'New Contact Form Submission';
+    $subject = "New Form Submission";
 
     // Message body
-    $messageBody = "Name: $name\n";
-    $messageBody .= "Email: $email\n";
-    $messageBody .= "Phone: $phone\n";
-    $messageBody .= "Message:\n$message";
+    $body = "Name: $name\nEmail: $email\nPhone: $phone\nMessage: $message";
 
     // Additional headers
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
+    $headers = "From: $email";
 
     // Send the email
-    $mailSuccess = mail($to, $subject, $messageBody, $headers);
+    $success = mail($to, $subject, $body, $headers);
 
-    if ($mailSuccess) {
-        echo 'Email sent successfully!';
+    // Check if the email was sent successfully
+    if ($success) {
+        echo "Your message has been sent successfully!";
     } else {
-        echo 'Error sending email.';
+        echo "Oops! Something went wrong, and we couldn't send your message.";
     }
 } else {
-    // Invalid request method
-    echo 'Invalid request method';
+    echo "Invalid request method.";
 }
 ?>
