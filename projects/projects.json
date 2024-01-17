@@ -2,7 +2,7 @@
   {
     "name": "Amica Publication",
     "desc": "This is ecommerce website for book store with order product.  Built using HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY, PHP, LARAVEL, MYSQL.",
-    "image": "amicapublication",
+    "image": "../assets/images/projects/amicapublication.png",
     "category": "ecommerce",
     "links": {
       "view": "",
@@ -12,7 +12,7 @@
   {
     "name": "Delhi Public School",
     "desc": "This website for school. Built using HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY, PHP, LARAVEL, MYSQL.",
-    "image": "delhipublic",
+    "image": "../assets/images/projects/delhipublic.png",
     "category": "education",
     "links": {
       "view": "",
