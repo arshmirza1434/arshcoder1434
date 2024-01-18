@@ -19,5 +19,15 @@
       "code": ""
     }
   }
+  {
+    "name": "Visithimalayan",
+    "desc": "This website for Uttarakhand trekking  . Built using HTML, CSS, BOOTSTRAP, JAVASCRIPT, JQUERY, PHP, LARAVEL, MYSQL.",
+    "image": "visithimalayan",
+    "category": "ecommerce",
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  }
 
 ]
