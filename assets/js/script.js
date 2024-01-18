@@ -146,6 +146,7 @@ $(document).ready(function () {
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 document.getElementById("contact-form").reset();
+              alert("fdf");
                 Swal.fire({
                   position: "top-end",
                   icon: "success",
