@@ -77,7 +77,7 @@ function fancyCursor(e) {
   let halfCursorSize = 12
   let halfTrailSize = 40
   let scaleMin = 0.35
-  let scaleMax = 4.0
+  let scaleMax = 3.0
   let finalX = e.pageX - halfCursorSize
   let finalY = e.pageY - halfCursorSize
   let finalTrailX = e.pageX - halfTrailSize
