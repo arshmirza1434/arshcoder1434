@@ -1,3 +1,43 @@
+Draggable.create(".flair--3", {
+  type: "rotation",
+  inertia: true
+});
+
+// Draggable.create(".flair--3", {
+//   type: "x,y",
+//   inertia: true
+// });
+
+// document.addEventListener("wheel", function(event) {
+//   gsap.to(".flair--3", { rotation: "+=" + event.deltaY * 3.0, duration: 0.1 });
+// });
+// document.addEventListener("wheel", function(event) {
+//   // Move the element down when scrolling down (adjust the value as needed)
+//   gsap.to(".flair--3", { y: "+=" + event.deltaY, duration: 0.1 });
+// });
+
+const element = document.querySelector(".flair--3");
+let isScrolling = false;
+
+document.addEventListener("wheel", function(event) {
+  if (!isScrolling) {
+    isScrolling = true;
+
+    // Calculate the new Y position based on scroll direction
+    const newY = event.deltaY > 0 ? window.innerHeight - 190 : -100;
+    gsap.to(".flair--3", { rotation: "+=" + event.deltaY * 6.0, duration: 1.5 });
+    // Move the element to the new position
+    gsap.to(element, { y: newY, duration: 1.5 });
+
+    // Wait for the scroll to end and then reset the flag
+    setTimeout(() => {
+      isScrolling = false;
+    }, 300); // Adjust the duration to match the gsap.to duration
+  }
+})
+
+
+
 function effect(){
   const end = Date.now() + 15 * 1000;
 
