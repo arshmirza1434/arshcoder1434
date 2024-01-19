@@ -133,6 +133,21 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
+
+.flair {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  max-height: 15vh;
+  max-width: 15vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.flair--3 {
+  background-image: url('../images/flair-3.webp');
+}
 /* pre loader start */
 .loader-container {
   position: fixed;
