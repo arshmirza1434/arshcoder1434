@@ -1,3 +1,24 @@
+const audio = document.getElementById("myAudio");
+const audioControlButton = document.getElementById("audio-control");
+
+// Play the audio in a loop when the window is loaded
+window.onload = function() {
+  audio.play();
+  audioControlButton.textContent = "♫";
+};
+
+audioControlButton.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    audioControlButton.textContent = "|| ";
+  } else {
+    audio.pause();
+    audioControlButton.textContent = "♫";
+  }
+});
+
+
+
 Draggable.create(".flair--3", {
   type: "rotation",
   inertia: true
